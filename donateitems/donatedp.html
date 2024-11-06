@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Dairy Products</title>
+    <style>
+        body {
+            font-family: Garamond, sans-serif;
+            background-color: #f7f3f0;
+            color: #5d3a33;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #5d3a33;
+            margin-top: 40px;
+        }
+
+        form {
+            max-width: 450px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #5d3a33;
+        }
+
+        select,
+        input[type="date"],
+        input[type="number"],
+        input[type="text"],
+        input[type="button"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        input[type="button"] {
+            background-color: #8e5e52;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #5d3a33;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donate Dairy Products</h1>
+    <form action="thankyou2.html" method="post">
+        <label for="product">Select the Dairy Product:</label>
+        <select name="product" id="product">
+            <option value="milk">Milk</option>
+            <option value="cheese">Cheese</option>
+            <option value="butter">Butter</option>
+            <option value="yogurt">Yogurt</option>
+            <option value="paneer">Paneer (Cottage Cheese)</option>
+            <option value="ghee">Ghee (Clarified Butter)</option>
+            <option value="cream">Cream</option>
+            <option value="buttermilk">Buttermilk</option>
+        </select>
+
+        <label for="description">Product Description:</label>
+        <input type="text" id="description" name="description" placeholder="Enter product description" required>
+
+        <label for="quantity">Quantity (in liters or kg):</label>
+        <input type="text" id="quantity" name="quantity" placeholder="Enter quantity in liters or kg" required>
+
+        <label for="price">Price of the Product (INR):</label>
+        <input type="number" id="price" name="price" min="0" placeholder="Enter price in INR" required>
+
+        <a href="thankyou2.html"><input type="button" value="Donate"></a>
+    </form>
+</body>
+</html>

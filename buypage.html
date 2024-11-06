@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Buying</title>
+    <script>
+        function confirmBuying() {
+            var result = confirm("Are you sure you want to proceed with the purchase?");
+            if (result) {
+                alert("Thank you for shopping with us!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Food Donation Bank</h1>
+    <p>Click the button below to confirm your purchase:</p>
+    <button onclick="confirmBuying()">Yes</button>
+</body>
+</html>

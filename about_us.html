@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="icon" type="image/x-icon" href="Feed__3_-removebg-preview.png">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+ /* Reset margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+/* Footer Styling */
+.footer {
+  background-color: rgba(142, 94, 82, 0.7); /* Adjusted background color to match your theme */
+  color: #ffffff;
+  padding: 40px;
+  font-family: Garamond, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left, .footer-top-right, .footer-bottom-right {
+  flex-basis: 100%; /* Default to full width for smaller screens */
+  margin-bottom: 20px;
+}
+
+/* Specific layout adjustments for each section */
+.footer-left {
+  flex-basis: 50%; /* Align to the left */
+}
+
+.footer-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.footer-left ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.footer-left ul li {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.footer-top-right {
+  flex-basis: 50%; /* Align to the top right */
+  text-align: right;
+  font-size: 1.4rem;
+  margin-top:20px;
+}
+#you:hover{
+  background-color: red;
+}
+#fa:hover{
+  background-color: blue;
+}
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top:200px;
+}
+
+.social-icon {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.footer-bottom-right {
+  flex-basis: 25%; /* Align bottom right */
+  text-align: right;
+  font-size: 1rem;
+  margin-top: 190px;
+}
+
+.footer-bottom-right p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .footer-left, .footer-top-right, .footer-bottom-right {
+    flex-basis: 25%; /* Adjust for larger screens */
+  }
+}
+
+    /* Navbar styles */
+    #navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(142, 94, 82, 0.7);
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #navbar img {
+      height: 100px; /* Original logo size */
+      margin-right: auto;
+    }
+
+    #navbar a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 1.7rem;
+    }
+#navbar a:hover {
+     color: #000000;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 60px 40px;
+  background-color: #f7f3f0;
+  color: #333;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us-content {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  color: #5d3a33;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Garamond, sans-serif;
+}
+.footer-left ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.35rem;
+}
+.footer-left li{
+  text-align: center;
+}
+.footer-left h1{
+  text-align: center;
+}
+.footer-left li:hover{
+  background-color:#88584c;
+}
+
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-us img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+/* Reviews Section */
+.reviews {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+  font-family: Garamond, serif;
+}
+
+.reviews h2 {
+  font-size: 2.5rem;
+  color: #5d3a33;
+  margin-bottom: 30px;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.review {
+  background-color: #f7f3f0;
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.review p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.4;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+  <div id="navbar">
+    <a href="index.html"><img src="images/Feed__3_-removebg-preview.png" alt="Logo"></a>
+    <a href="about_us.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="donatepage.html">Donate</a>
+    <a href="#">Buy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="help.html">Help</a>
+  </div>
+
+<section class="about-us">
+  <h2>About Us</h2>
+  <div class="about-us-content">
+    <p>
+      At Food for the Need, we are driven by a powerful mission: to bridge the gap between surplus food and those who need it most. In a world where food waste is a significant issue, our organization focuses on redistributing excess food to communities and individuals facing hunger. We believe that no one should go to bed hungry, especially when there is more than enough food to go around.
+    </p>
+    <p>
+      By partnering with local businesses, restaurants, and volunteers, we work tirelessly to rescue food that would otherwise go to waste. Our team ensures that this food is repurposed and distributed to those who need it the most, creating a positive impact on our community and our environment. Together, we're creating a sustainable future, where food is valued, waste is minimized, and everyone has access to nutritious meals.
+    </p>
+    <p>
+      Join us on our journey to make a difference, one meal at a time. Whether you're a business wanting to reduce waste, a volunteer ready to make an impact, or someone who cares deeply about creating a fairer, more sustainable world, there's a place for you at Feed the Need.
+    </p>
+  </div>
+  <img src="/images/people_working.jpg" alt="People working together to distribute food">
+</section>
+<section class="reviews">
+  <h2>What People Are Saying</h2>
+  <div class="review-container">
+    <div class="review">
+      <img src="/images/bohra.png" alt="Reviewer 1">
+      <p>"Feed the Need has changed the way our community addresses food waste. Their efforts are inspiring and truly impactful." - Manit Bohra.</p>
+    </div>
+    <div class="review">
+      <img src="/images/bobby.png" alt="Reviewer 2">
+      <p>"I am proud to volunteer with such a dedicated organization. They're not just reducing waste but creating real change." - Bobby Anand.</p>
+    </div>
+    <div class="review">
+      <img src="/images/kamalulli.png" alt="Reviewer 2">
+      <p>“Volunteering with Feed the Need is inspiring. They’re reducing waste and making a real impact in people’s lives. Proud to be a part of this mission!” - Kamalulli 🎸</p>
+    </div>
+    <div class="review">
+      <img src="/images/jawad.png" alt="Reviewer 3">
+      <p>"Thanks to Feed the Need, I’ve seen hope in the eyes of people who were struggling. Their work is remarkable!" - Jawad Shafif</p>
+    </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Left Section (Logo and Navigation Links) -->
+    <div class="footer-left">
+      <h1>Feed The Need</h1>
+      <ul>
+        <li><b><a href="about_us.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="donatepage.html">Donate</a></b></li>
+        <li><b><a href="">Buy</a></b></li>
+        <li><b><a href="contact-us.html">Contact</a></b></li>
+        <li><b><a href="help.html">Help</a></b></li>
+      </ul>
+    </div>
+
+    <!-- Bottom Right Section (Policies) -->
+    <div class="footer-bottom-right">
+      <p>Terms & Conditions</p>
+      <p>Privacy Policy</p>
+      <p>© 2024 by Feed the Need</p>
+    </div>
+
+<!-- Center Section (Social Media Links) -->
+    <div class="social-icons">
+        <a id="in" href="https://www.instagram.com/" class="social-icon"><i id="in" class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="social-icon"><i id="fa" class="fab fa-facebook"></i></a>
+        <a id="you" href="https://www.youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+
+    <!-- Top Right Section (Email and Phone) -->
+    <div class="footer-top-right">
+      <p>feedtheneed@gmail.com</p>
+      <p>123-456-7890</p>
+      <p>Uttarahalli Main Road, Banshankri 2nd Stage, Bangalore - 82</p>
+    </div>   
+  </div>
+</footer>
+
+</body>
+</html>

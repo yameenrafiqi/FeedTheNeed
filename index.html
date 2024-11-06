@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed The Need</title>
+  <link rel="icon" type="image/x-icon" href="Feed__3_-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: rgba(142, 94, 82, 0.7); /* Adjusted background color to match your theme */
+  color: #ffffff;
+  padding: 40px;
+  font-family: Garamond, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left, .footer-top-right, .footer-bottom-right {
+  flex-basis: 100%; /* Default to full width for smaller screens */
+  margin-bottom: 20px;
+}
+
+/* Specific layout adjustments for each section */
+.footer-left {
+  flex-basis: 50%; /* Align to the left */
+}
+
+.footer-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.footer-left ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.footer-left ul li {
+  margin-bottom: 8px;
+}
+
+.footer-top-right {
+  flex-basis: 50%; /* Align to the top right */
+  text-align: right;
+  font-size: 1.4rem;
+  margin-top:20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top:200px;
+}
+
+.social-icon {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.footer-bottom-right {
+  flex-basis: 25%; /* Align bottom right */
+  text-align: right;
+  font-size: 1rem;
+  margin-top: 190px;
+}
+
+.footer-bottom-right p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .footer-left, .footer-top-right, .footer-bottom-right {
+    flex-basis: 25%; /* Adjust for larger screens */
+  }
+}
+
+    /* Reset margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+/* Donation Section Styles */
+.donation-section {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(142, 94, 82, 0.2);
+  color: #5d3a33; /* Text color similar to other sections */
+  font-family: Garamond, sans-serif;
+}
+
+.donation-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.donation-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.donate-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  background-color: #8e5e52;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.donate-button:hover {
+  background-color: #000000;
+}
+
+.donation-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.donation-option {
+  background-color: #5d3a33;
+  color: #e6d0e6;
+  font-size: 2.5rem;
+  padding: 20px 110px 20px 20px;
+  border-radius: 20px;
+  width: 100px;
+  text-align: center;
+}
+
+    /* Navbar styles */
+    #navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(142, 94, 82, 0.7);
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #navbar img {
+      height: 100px; /* Original logo size */
+      margin-right: auto;
+    }
+
+    #navbar a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 1.7rem;
+    }
+#navbar a:hover {
+     color: #000000;
+}
+
+
+    /* Slider and overlay styles */
+    .slider-container {
+      width: 100vw;
+      height: 40vw;
+      overflow: hidden;
+      position: relative;
+      background: #f5f5f5;
+    }
+
+    .slider {
+      display: flex;
+      position: absolute;
+      left: 0;
+      animation: slideShow 16s infinite;
+    }
+
+    .slide {
+      min-width: 100vw;
+      height: 40vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100vw;
+      height: 40vw;
+      object-fit: cover;
+    }
+
+    /* Light color overlay */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(142, 94, 82, 0.7);
+      pointer-events: none;
+    }
+
+    /* Fixed text */
+    .fixed-text-container {
+      position: absolute;
+      top: 30%;
+      left: 50px;
+      z-index: 2;
+      color: #FFFFFF;
+      font-family: Garamond, sans-serif;
+    }
+
+    .fixed-text-heading {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .fixed-text-subtitle {
+      font-size: 1.5rem;
+      font-weight: normal;
+      max-width: 600px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+   /* Join Us Text in Bottom-Right Corner with Arrow Icon */
+.join-us-text {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+  font-size: 2.5rem;
+  color: #FFFFFF; /* Original color */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  font-family: Garamond, sans-serif;
+}
+
+.join-us-text a {
+  color: inherit; /* Inherit the white color from .join-us-text */
+  text-decoration: none; /* No underline */
+}
+
+.join-us-text a:visited {
+  color: inherit; /* Retain original color after visit */
+  text-decoration: none; /* No underline */
+}
+
+.join-us-text a:hover {
+  color: #000000; /* Change color to black on hover */
+  text-decoration: none; /* No underline */
+}
+
+.join-us-arrow {
+  font-size: 2.5rem;
+  margin-left: 10px;
+}
+
+
+    @keyframes slideShow {
+      0% { left: 0; }
+      20% { left: 0; }
+      25% { left: -100vw; }
+      45% { left: -100vw; }
+      50% { left: -200vw; }
+      70% { left: -200vw; }
+      75% { left: -300vw; }
+      95% { left: -300vw; }
+      100% { left: 0; }
+    }
+
+    /* New Story Section */
+    .story-section {
+      display: flex;
+      align-items: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+
+    .story-text {
+      flex: 1;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #8e5e52;
+      font-family: Arial, sans-serif;
+      padding-right: 20px;
+    }
+
+    .story-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #5d3a33;
+    }
+
+    .story-image {
+      flex: 1;
+    }
+
+    .story-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Our Story Button */
+    .story-button {
+      display: inline-block;
+      margin-top: 20px;
+      margin-right:40px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      color: #FFFFFF;
+      background-color: #8e5e52;
+      text-decoration: none;
+      border-radius: 25px;
+      font-family: Arial, sans-serif;
+      /* float:right; */
+    }
+
+    .story-button:hover {
+      background-color: #000000;
+    }
+/* Blog Section Styling */
+.blog-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  color: #5d3a33;
+  font-family: Garamond, sans-serif;
+}
+
+.blog-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.blog-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Increase gap for more space between image and text */
+}
+
+.blog-image img {
+  width: 350px; /* Increase image size */
+  height: auto;
+  border-radius: 15px;
+}
+
+.blog-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.blog-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Blog Button Styling */
+.blog-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  background-color: #8e5e52;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: Arial, sans-serif;
+/* float:right; */
+}
+
+.footer-left ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.35rem;
+}
+.footer-left li{
+  text-align: center;
+}
+.footer-left h1{
+  text-align: center;
+}
+.footer-left li:hover{
+  background-color:#88584c;
+}
+
+.blog-button:hover {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .blog-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-image img {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar">
+    <a href="index.html"><img src="images/Feed__3_-removebg-preview.png" alt="Logo"></a>
+    <a href="about_us.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="donatepage.html">Donate</a>
+    <a href="#">Buy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="help.html">Help</a>
+  </div>
+
+  <!-- Slider Container -->
+  <div class="slider-container">
+    <div class="fixed-text-container">
+      <div class="fixed-text-heading">Together, We Can Feed <br>Every Heart</div>
+      <div class="fixed-text-subtitle">Every meal matters at Feed the Need Foundation. Together, we're building a community where no one goes hungry.</div>
+    </div>
+    <div class="join-us-text"><a href="login.html" target="_blank">Join Us<i class="fas fa-arrow-right join-us-arrow"></i></a></div>
+    <div class="slider">
+      <div class="slide">
+        <img src="images/food-donation-services-988981.png" alt="Image 1">
+        <div class="overlay"></div>
+      </div>
+      <div class="slide">
+        <img src="images/bohra.png" alt="Image 2">
+        <div class="overlay"></div>
+      </div>
+      <div class="slide">
+        <img src="https://img.freepik.com/premium-photo/volunteers-holding-thank-you-message-food-donation-box-full-groceries-charity_174533-31620.jpg" alt="Image 3">
+        <div class="overlay"></div>
+      </div>
+      <div class="slide">
+        <img src="https://media.istockphoto.com/id/524903696/photo/poor-indian-children-asking-for-food-india.jpg?s=612x612&w=0&k=20&c=uAUDyZRdpReAW51hD29W7fOCTDzNrOdHkAdKXErbapU=" alt="Image 4">
+        <div class="overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <div class="story-section">
+    <div class="story-text">
+      <h2>Turning Compassion Into Nourishment</h2>
+      <p>Every meal we provide at Feed the Need Foundation tells a story of resilience and hope. Our passion for helping others led us to create this foundation, where we strive to feed those who need it the most. Our journey is one of teamwork, dedication, and unwavering belief that together, we can combat hunger and bring joy to our community.</p>
+      <a href="about_us.html" class="story-button">Our Story</a>
+    </div>
+    <div class="story-image">
+      <img src="images/donation-box-food_165488-2449.jpg" alt="Our Story Image">
+    </div>
+  </div>
+<!-- Donation Section -->
+<div class="donation-section">
+  <h1>Help Us Grow</h1>
+  <p>Your contribution makes a huge difference</p>
+  <button class="donate-button">Contribute</button>
+  <div class="donation-options">
+    <div class="donation-option">₹50</div>
+    <div class="donation-option">₹75</div>
+    <div class="donation-option">₹200</div>
+    <div class="donation-option">₹500</div>
+  </div>
+</div>
+
+<!-- Blog Section -->
+<div class="blog-section">
+  <h1>Know More!</h1>
+  <div class="blog-content">
+    <div class="blog-image">
+      <img src="images/51f8377a11a9ff3dd4d0d6763b4f2c9a.jpg" alt="Blog Image">
+    </div>
+    <div class="blog-text">
+      <p>Delve into inspiring stories of change and resilience from within our community. Our blog shares the journeys of those who’ve overcome hunger, the impact of every donation, and updates on our mission to create a hunger-free world. Join us as we continue to highlight the power of kindness, dedication, and compassion in making a lasting difference.</p>
+      <a href="blog.html" class="blog-button">Read Our Blog</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Left Section (Logo and Navigation Links) -->
+    <div class="footer-left">
+      <h1>Feed The Need</h1>
+      <ul>
+        <li><b><a href="about_us.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="donatepage.html">Donate</a></b></li>
+        <li><b><a href="">Buy</a></b></li>
+        <li><b><a href="contact-us.html">Contact</a></b></li>
+        <li><b><a href="help.html">Help</a></b></li>
+      </ul>
+    </div>
+
+    <!-- Bottom Right Section (Policies) -->
+    <div class="footer-bottom-right">
+      <p>Terms & Conditions</p>
+      <p>Privacy Policy</p>
+      <p>© 2024 by Feed the Need</p>
+    </div>
+
+<!-- Center Section (Social Media Links) -->
+    <div class="social-icons">
+        <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+
+    <!-- Top Right Section (Email and Phone) -->
+    <div class="footer-top-right">
+      <p>feedtheneed@gmail.com</p>
+      <p>123-456-7890</p>
+      <p>Uttarahalli Main Road, Banshankri 2nd Stage, Bangalore - 82</p>
+    </div>   
+  </div>
+</footer>
+
+  <script>
+    const slider = document.querySelector('.slider');
+    
+    slider.addEventListener('animationend', () => {
+      slider.style.animation = 'none';
+      slider.style.left = '0';
+      slider.offsetHeight;
+      slider.style.animation = 'slideShow 16s infinite';
+    });
+  </script>
+</body>
+</html>

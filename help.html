@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help</title>
+  <link rel="icon" type="image/x-icon" href="Feed__3_-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Reset margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar styles */
+    #navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(142, 94, 82, 0.7);
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #navbar img {
+      height: 100px;
+      margin-right: auto;
+    }
+
+    #navbar a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 1.7rem;
+    }
+    
+    #navbar a:hover {
+      color: #000000;
+    }
+
+    /* Help Section */
+    .help-section {
+      padding: 60px 40px;
+      background-color: #f7f3f0;
+      color: #333;
+      max-width: 1200px;
+      margin: 40px auto;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .help-section h2 {
+      font-size: 2.5rem;
+      color: #5d3a33;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: Garamond, sans-serif;
+    }
+    .footer-left ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.35rem;
+}
+.footer-left li{
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+.footer-left h1{
+  text-align: center;
+}
+.footer-left li:hover{
+  background-color:#88584c;
+}
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 40px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .faq-section h2 {
+      font-size: 2.5rem;
+      color: #5d3a33;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      font-family: Garamond, serif;
+    }
+
+    .faq {
+      background-color: #f7f3f0;
+      width: 80%;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq h3 {
+      font-size: 1.8rem;
+      color: #5d3a33;
+      margin-bottom: 15px;
+    }
+
+    .faq p {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Footer Styling */
+    .footer {
+      background-color: rgba(142, 94, 82, 0.7);
+      color: #ffffff;
+      padding: 40px;
+      font-family: Garamond, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left, .footer-top-right, .footer-bottom-right {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Social Icons */
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      display: inline-block;
+    }
+
+    /* Footer Bottom Section */
+    .footer-bottom-right p {
+      margin: 5px 0;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .footer-left, .footer-top-right, .footer-bottom-right {
+        flex-basis: 25%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar">
+    <a href="index.html"><img src="images/Feed__3_-removebg-preview.png" alt="Logo"></a>
+    <a href="about_us.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="donatepage.html">Donate</a>
+    <a href="#">Buy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="help.html">Help</a>
+  </div>
+
+  <!-- Help Section -->
+  <section class="help-section">
+    <h2>How Can We Help You?</h2>
+    <p>
+      Welcome to our Help page! Below you’ll find answers to some of the most common questions. If you don’t find what you’re looking for, feel free to reach out to us directly.
+    </p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq">
+        <h3>What is "Feed The Need"?</h3>
+        <p>Feed The Need is a non-profit organization committed to reducing food waste by rescuing surplus food and redistributing it to those in need.</p>
+      </div>
+      <div class="faq">
+        <h3>How can I donate food?</h3>
+        <p>If you have surplus food to donate, simply get in touch with us via our Contact Us page, and we will arrange a pickup or drop-off location.</p>
+      </div>
+      <div class="faq">
+        <h3>Can I volunteer with Feed The Need?</h3>
+        <p>Yes! We are always looking for passionate volunteers. Visit our Volunteer page for more details on how to get involved.</p>
+      </div>
+      <div class="faq">
+        <h3>How do I know if my donation was received?</h3>
+        <p>Once your donation is received, we will send a confirmation email. You can also track your contribution on our website under your account.</p>
+      </div>
+      <div class="faq">
+        <h3>Can I donate money instead of food?</h3>
+        <p>Yes, we welcome monetary donations to help fund our operations. Please visit our Donate page for more details on how to contribute.</p>
+      </div>
+      <div class="faq">
+        <h3>Are donations tax-deductible?</h3>
+        <p>Yes, all donations to Feed The Need are tax-deductible. We will provide you with a receipt for your records.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h1>Feed The Need</h1>
+        <ul>
+          <li><b><a href="about_us.html">About</a></b></li>
+          <li><b><a href="blog.html">Blog</a></b></li>
+          <li><b><a href="donatepage.html">Donate</a></b></li>
+          <li><b><a href="#">Buy</a></b></li>
+          <li><b><a href="contact-us.html">Contact</a></b></li>
+          <li><b><a href="help.html">Help</a></b></li>
+        </ul>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <div class="footer-top-right">
+        <p>feedtheneed@gmail.com</p>
+        <p>123-456-7890</p>
+        <p>Uttarahalli Main Road, Banshankri 2nd Stage, Bangalore - 82</p>
+      </div>
+
+      <div class="footer-bottom-right">
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>© 2024 by Feed the Need</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

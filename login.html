@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed the Need - Login</title>
+    <link rel="icon" type="image/x-icon" href="Feed__3_-removebg-preview.png">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    /* Navbar styles */
+    #navbar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: rgba(142, 94, 82, 0.7);
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #navbar img {
+      height: 100px; /* Original logo size */
+      margin-right: auto;
+    }
+
+    #navbar a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+      font-size: 1.7rem;
+    }
+#navbar a:hover {
+     color: #000000;
+}
+/* Footer Styling */
+.footer {
+  background-color: rgba(142, 94, 82, 0.7); /* Adjusted background color to match your theme */
+  color: #ffffff;
+  padding: 40px;
+  font-family: Garamond, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-left, .footer-top-right, .footer-bottom-right {
+  flex-basis: 100%; /* Default to full width for smaller screens */
+  margin-bottom: 20px;
+}
+
+/* Specific layout adjustments for each section */
+.footer-left {
+  flex-basis: 50%; /* Align to the left */
+}
+
+.footer-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.footer-left ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.footer-left ul li {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.footer-top-right {
+  flex-basis: 50%; /* Align to the top right */
+  text-align: right;
+  font-size: 1.4rem;
+  margin-top:20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top:200px;
+}
+
+.social-icon {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.footer-bottom-right {
+  flex-basis: 25%; /* Align bottom right */
+  text-align: right;
+  font-size: 1rem;
+  margin-top: 190px;
+}
+
+.footer-bottom-right p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .footer-left, .footer-top-right, .footer-bottom-right {
+    flex-basis: 25%; /* Adjust for larger screens */
+  }
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .abc {
+            position: relative;
+            background-image: url('https://ik.imagekit.io/l2o8gnuspz/df4ta/application/files/3417/1705/4978/food_donation.jpeg?tr=if-w_gt_1300,w-1300,if-end'); /* Replace with an appropriate background image */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Garamond, sans-serif;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Overlay for background image */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(253, 244, 242, 0.2);/* Adjust opacity as needed */
+            z-index: 1;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(142, 94, 82, 0.7);
+            padding: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-form h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .login-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+
+        }
+
+        .login-form button {
+            background-color: white;
+            color: #5d3a33;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .login-form button:hover {
+            background-color: #000000;
+            color:white;
+        }
+
+        .login-form label {
+            font-size: 1em;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .options {
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .options a {
+            color:white;
+            text-decoration: none;
+            transition: color 0.3s;
+            
+        }
+
+        .options a:hover {
+            color: #000000;
+        }
+
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .social-login a {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        .social-login button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .footer {
+      background-color: rgba(142, 94, 82, 0.7);
+      color: #ffffff;
+      padding: 40px;
+      font-family: Garamond, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-left, .footer-top-right, .footer-bottom-right {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+
+    /* Footer Social Icons */
+    .social-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      display: inline-block;
+    }
+
+    /* Footer Bottom Section */
+    .footer-bottom-right p {
+      margin: 5px 0;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .footer-left, .footer-top-right, .footer-bottom-right {
+        flex-basis: 25%;
+      }
+    }
+
+        .footer-left ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.35rem;
+}
+.footer-left li{
+  text-align: center;
+}
+.footer-left h1{
+  text-align: center;
+}
+.footer-left li:hover{
+  background-color:#88584c;
+}
+
+        .social-login button i {
+            margin-right: 8px;
+        }
+
+        /* Different color on hover for each social login button */
+        .social-login button.google {
+            background-color: #db4437;
+        }
+        .social-login button.google:hover {
+            background-color: #000000; /* Darker shade for hover */
+        }
+
+        .social-login button.microsoft {
+            background-color: #0078d4;
+        }
+        .social-login button.microsoft:hover {
+            background-color: #000000; /* Darker shade for hover */
+        }
+
+        .social-login button.facebook {
+            background-color: #3b5998;
+        }
+        .social-login button.facebook:hover {
+            background-color: #000000; /* Darker shade for hover */
+        }
+    </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar">
+    <a href="index.html"><img src="images/Feed__3_-removebg-preview.png" alt="Logo"></a>
+    <a href="about_us.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="donatepage.html">Donate</a>
+    <a href="#">Buy</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="help.html">Help</a>
+  </div>
+<div class="abc">
+    <div class="overlay"></div> <!-- Overlay for background -->
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required minlength="7">
+                <!-- Sign In Button as a link -->
+                <a href="your_signin_url" style="text-decoration: none;">
+                    <button type="button">Sign In</button>
+                </a>
+                <label>
+                    <input type="checkbox" id="rememberMe">
+                    Remember me
+                </label>
+                <p class="options"> 
+                 Dont have an account? <a href="#">Sign up now</a>
+                </p>
+            </form>
+            <div class="social-login">
+                <!-- Social login buttons as links -->
+                <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AcMMx-fgFGlgs7B8_4uBbfYXGXl8YyNuRwr1_80qOlZGn50h6DiaY-G7KVmE0-U_LN6uMd3oIw0noQ&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-786047196%3A1730878245641268&ddm=1" target="_blank">
+                    <button class="google" type="button"><i class="fab fa-google"></i> Sign in with Google</button>
+                </a>
+                <a href="https://account.microsoft.com/account/manage-my-account" target="_blank">
+                    <button class="microsoft" type="button"><i class="fab fa-microsoft"></i> Sign in with Microsoft</button>
+                </a>
+                <a href="https://www.facebook.com/facebook/" target="_blank">
+                    <button class="facebook" type="button"><i class="fab fa-facebook-f"></i> Sign in with Facebook</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h1>Feed The Need</h1>
+      <ul>
+        <li><b><a href="about_us.html">About</a></b></li>
+        <li><b><a href="blog.html">Blog</a></b></li>
+        <li><b><a href="donatepage.html">Donate</a></b></li>
+        <li><b><a href="">Buy</a></b></li>
+        <li><b><a href="contact-us.html">Contact</a></b></li>
+        <li><b><a href="help.html">Help</a></b></li>
+      </ul>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="footer-top-right">
+      <p>feedtheneed@gmail.com</p>
+      <p>123-456-7890</p>
+      <p>Uttarahalli Main Road, Banshankri 2nd Stage, Bangalore - 82</p>
+    </div>
+
+    <div class="footer-bottom-right">
+      <p>Terms & Conditions</p>
+      <p>Privacy Policy</p>
+      <p>© 2024 by Feed the Need</p>
+    </div>
+  </div>
+</footer>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.querySelector('input[type="email"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+            const rememberMe = document.getElementById('rememberMe').checked;
+            
+            // Check password length
+            if (password.length < 7) {
+                alert("Password must be at least 7 characters long.");
+                return;
+            }
+            
+            // Perform login logic (e.g., AJAX request)
+            console.log(`Email: ${email}\nPassword: ${password}\nRemember Me: ${rememberMe}`);
+        });
+    </script>
+</body>
+</html>
